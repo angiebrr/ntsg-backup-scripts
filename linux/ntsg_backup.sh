@@ -120,7 +120,7 @@ if [[ -z "${file_types}" ]]; then
 fi
 
 # Only process user_config variables if the user_config is non-empty and exists
-if [[ ! -z "${user_config}" ]] && [[ -d "${user_config}" ]]; then
+if [[ ! -z "${user_config}" ]] && [[ -f "${user_config}" ]]; then
 
 	# If file_types is non-empty, check if exists in the JSON file
 	# -----------------------------------------------------------------------
