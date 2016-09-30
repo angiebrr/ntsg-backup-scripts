@@ -111,7 +111,7 @@ Suppose that you prefixed a project's documentation with "IMPORTANT-PROJECT-DOCS
 
 ## Usage
 
-### Windows Version: `windows/ntsg_backup.cmd`
+### Windows Version
 
 #### Overview
 
@@ -120,7 +120,7 @@ The Windows version of this script is written as a DOS-style batch file that use
 #### Usage
 
 ```
-ntsg_backup.cmd <user config> <logs> <input> <output> <file type section name> [robocopy options]
+ntsg_backup.exe <user config> <logs> <input> <output> <file type section name> [robocopy options]
 ```
 
 | Argument Name         |Required?| Description                                                                 |
@@ -131,7 +131,6 @@ ntsg_backup.cmd <user config> <logs> <input> <output> <file type section name> [
 | output                  | Yes | The path to copy to; it needs to exist                                        |
 | file type section name  | Yes | The name of the section from user_config.json for filtering the files to copy |
 | robocopy options        | No  | [Options for the robocopy command](https://technet.microsoft.com/en-us/library/cc733145.aspx)  |
-
 
 
 #### Examples
@@ -154,13 +153,13 @@ The user config file is at:
 If I wanted to backup *everything*, then a basic example of using this script looks like the following:
 
 ```bash
-ntsg_backup.cmd "C:\user_config.json" "C:\Logs" "W:\TRANS\adm_angela" "C:\Backups" "everything"
+ntsg_backup.exe "C:\user_config.json" "C:\Logs" "W:\TRANS\adm_angela" "C:\Backups" "everything"
 ```
 
 If I wanted to backup only *source code*, then it would look like this:
 
 ```bash
-ntsg_backup.cmd "C:\user_config.json" "C:\Logs" "W:\TRANS\adm_angela" "C:\Backups" "source_code"
+ntsg_backup.exe "C:\user_config.json" "C:\Logs" "W:\TRANS\adm_angela" "C:\Backups" "source_code"
 ```
 
 ##### Robocopy options usage
@@ -178,7 +177,7 @@ There are a ton more options, and you can find documentation for these options a
 If you wanted to, for example, still have the `/S /XO /NDL` options but also wanted to the `/Z` restartable mode option (allows you to pick up where you left off if robocopy was interrupted), you would do the following:
 
 ```bash
-ntsg_backup.cmd "C:\user_config.json" "C:\Logs" "W:\TRANS\adm_angela" "C:\Backups" "everything" "/S /XO /NDL /Z"
+ntsg_backup.exe "C:\user_config.json" "C:\Logs" "W:\TRANS\adm_angela" "C:\Backups" "everything" "/S /XO /NDL /Z"
 ```
 
 #### Logging
@@ -246,7 +245,7 @@ Everything is Ok
 
 Note that the name of the log (shown as a comment at the top) also includes the file type section name. In this case, the file type section name was `everything`. We know this because the log file name is of the form `<backup_name>__backup-<file_type_section_name>_<datetime>.log`. Also note that, if `compress_after_copy` is false, `<backup_name>` will be a default value and ignore the `backup_name` entry in `user_config.json`.
 
-### Linux Version: `linux/ntsg-backup.sh`
+### Linux Version
 
 #### Overview
 
@@ -255,7 +254,7 @@ The Linux version of this script is written as a bash style script that uses *Rs
 #### Usage
 
 ```
-ntsg_backup.sh <user_config> <logs> <input> <output> <file type section name> [rsync options]
+ntsg_backup.run <user_config> <logs> <input> <output> <file type section name> [rsync options]
 ```
 
 | Argument Name         |Required?| Description                                                                 |
@@ -289,13 +288,13 @@ The user config file is at:
 If I wanted to backup *everything*, then a basic example of using this script looks like the following:
 
 ```bash
-./ntsg_backup.sh "/user_config.json" "/logs" "/anx_v4/TRANS/adm_angela" "/anx_v4/backups" "everything"
+./ntsg_backup.run "/user_config.json" "/logs" "/anx_v4/TRANS/adm_angela" "/anx_v4/backups" "everything"
 ```
 
 If I wanted to backup only *source code*, then it would look like this:
 
 ```bash
-./ntsg_backup.sh "/user_config.json" "/logs" "/anx_v4/TRANS/adm_angela" "/anx_v4/backups" "source_code"
+./ntsg_backup.run "/user_config.json" "/logs" "/anx_v4/TRANS/adm_angela" "/anx_v4/backups" "source_code"
 ```
 
 ##### Rsync options usage
@@ -314,7 +313,7 @@ There are a ton more options, and you can find documentation for these options a
 If you wanted to, for example, still have the `-aum` options but did not want rsync verbosity, you would do the following:
 
 ```bash
-./nstg_backup.sh "/user_config.json" "/logs" "/anx_v4/TRANS/adm_angela" "/anx_v4/Backups" "everything" "-aum"
+./nstg_backup.run "/user_config.json" "/logs" "/anx_v4/TRANS/adm_angela" "/anx_v4/Backups" "everything" "-aum"
 ```
 
 #### Logging
