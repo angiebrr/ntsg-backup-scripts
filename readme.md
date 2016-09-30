@@ -6,6 +6,10 @@ This application offers Linux and Windows scripts used to back up and compress f
 
 As of v1.0.0, this a console-based application that will write its results to the console and to a log file within the script's / executable's directory.
 
+## Builds
+
+You can find builds of this software in `bin`.
+
 
 ## User Config JSON File
 
