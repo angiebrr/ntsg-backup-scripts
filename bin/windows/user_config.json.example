@@ -1,0 +1,53 @@
+{
+	"compression":
+	{
+		"compress_after_copy": "true",
+		"compress_type": "7z",
+		"backup_name": "ntsg-robocopy"
+	},
+	"file_types":
+	{
+		"documents":
+		[
+			"*.pdf",
+			"*.doc",
+			"*.docx",
+			"*.ppt",
+			"*.pptx",
+			"*.txt",
+			"*.md",
+			"*.xls",
+			"*.xlsx"
+		],
+		"source_code":
+		[
+			"*.c",
+			"*.h",
+			"*.cpp",
+			"*.hpp",
+			"*.py",
+			"*.v",
+			"*.mat"
+		],
+		"compressed_data":
+		[
+			"*.zip",
+			"*.tar",
+			"*.gz",
+			"*.h5",
+			"*.hdf"
+		],
+		"raw_data":
+		[
+			"*.tif",
+			"*.bin",
+			"*.dat",
+			"*.csv",
+			"*.img"
+		],
+		"everything":
+		[
+			"*.*"
+		]
+	}
+}
