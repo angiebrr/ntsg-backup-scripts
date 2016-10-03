@@ -4,6 +4,8 @@
 
 Although written in bash, the Linux versions have been archived as a "run" file that will uncompress itself and include the libraries that are needed to run it. There is only a 64-bit version of the program.
 
+You only need the run file, but you can download the `user_config.json.example` as a reference for what the program is expecting.
+
 ## Known Issues
 
 - There is only a 64-bit version
