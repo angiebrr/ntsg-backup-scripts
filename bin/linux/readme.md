@@ -28,7 +28,7 @@ Any subsequent arguments to the archive will be passed as additional arguments t
 ## Known Issues
 
 - There is only a 64-bit version
-- Paths MUST be absolute if you are only using the "run" file. If you use the `--keep` and '--noexec` commands and run the `ntsg_backup.sh` script directly, then the path does not need to be absolute.
+- Paths MUST be absolute if you are only using the "run" file. If you use the `--keep` and `--noexec` commands and run the `ntsg_backup.sh` script directly, then the path does not need to be absolute.
 
 
 
