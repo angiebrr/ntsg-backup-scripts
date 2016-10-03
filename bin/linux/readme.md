@@ -8,7 +8,7 @@ You only need the run file, but you can download the `user_config.json.example` 
 
 ## Special Commands 
 
-The "run" file is an archives generated with Makeself and, as such, can be passed the following additional arguments:
+The "run" file is an archive generated with Makeself and, as such, can be passed the following additional arguments:
 
 * `--keep` : Prevent the files to be extracted in a temporary directory that will be removed after the embedded script's execution. The files will then be extracted in the current working directory and will stay here until you remove them.
 * `--verbose` : Will prompt the user before executing the embedded command
