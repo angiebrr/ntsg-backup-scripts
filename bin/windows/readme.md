@@ -4,7 +4,7 @@
 
 Although written in batch, the Windows versions have been built as executables that include the libraries needed to run it. There is a 32-bit and a 64-bit version of the executable.
 
-You only need the executable, but you can download the user_config.json.example as a reference for what the program is expecting.
+You only need the executable, but you can download the `user_config.json.example` as a reference for what the program is expecting.
 
 ## Known Issues
 
